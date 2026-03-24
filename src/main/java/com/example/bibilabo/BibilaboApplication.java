@@ -1,11 +1,12 @@
 package com.example.bibilabo;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+//import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
 
-// 加上 exclude，告诉 Spring Boot 先别管数据库
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication
+@MapperScan("com.example.bibilabo.mapper")
 public class BibilaboApplication {
 
     public static void main(String[] args) {
